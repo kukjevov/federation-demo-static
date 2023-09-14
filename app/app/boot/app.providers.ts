@@ -7,6 +7,8 @@ import {TitledDialogService} from '@anglr/common/material';
 import {provideGlobalNotifications} from '@anglr/notifications';
 import {MissingTranslationHandler, TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {config} from 'app-config';
+import {routes as cmpRoutes} from 'cmp/plugin';
+import {routes as libRoutes} from 'lib/plugin';
 
 import {WebpackTranslateLoaderService} from '../services/webpackTranslateLoader';
 import {ReportMissingTranslationService} from '../services/missingTranslation';
@@ -49,6 +51,8 @@ export const appProviders: (Provider|EnvironmentProviders)[] =
                           loadChildren: () => import('../pages/+default/default.module').then(({DefaultModule}) => DefaultModule)
                       },
                       ...extractRoutes(components),
+                      ...cmpRoutes,
+                      ...libRoutes,
                       accessDeniedRoute,
                       notFoundRoute,
                   ],

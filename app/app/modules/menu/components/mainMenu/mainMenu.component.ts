@@ -42,17 +42,18 @@ export class MainMenuComponent implements OnInit
      */
     public async ngOnInit(): Promise<void>
     {
-        for(const pluginConfig of config.plugins)
-        {
-            const pluginDef = await this._pluginLoader.getPlugin(pluginConfig);
+        console.log(this._pluginLoader, this._changeDetector, config);
+        // for(const pluginConfig of config.plugins)
+        // {
+        //     const pluginDef = await this._pluginLoader.getPlugin(pluginConfig);
 
-            if(pluginDef?.menu)
-            {
-                this.dynamicMenuItems.push(pluginDef.menu);
-            }
-        }
+        //     if(pluginDef?.menu)
+        //     {
+        //         // this.dynamicMenuItems.push(pluginDef.menu);
+        //     }
+        // }
 
-        this._changeDetector.detectChanges();
+        // this._changeDetector.detectChanges();
     }
 
     //######################### public methods - template bindings #########################

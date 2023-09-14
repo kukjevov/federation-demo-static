@@ -142,13 +142,13 @@ export const globalProviders: (Provider|EnvironmentProviders)[] =
     DIALOG_INTERNAL_SERVER_ERROR_RENDERER_PROVIDER,
 
     //######################### APP INITIALIZER #########################
-    <FactoryProvider>
-    {
-        useFactory: appInitializerPluginsRoutesFactory,
-        provide: APP_INITIALIZER,
-        deps: [PluginLoader, Router],
-        multi: true
-    },
+    // <FactoryProvider>
+    // {
+    //     useFactory: appInitializerPluginsRoutesFactory,
+    //     provide: APP_INITIALIZER,
+    //     deps: [PluginLoader, Router],
+    //     multi: true
+    // },
     <FactoryProvider>
     {
         useFactory: appInitializerFactory,

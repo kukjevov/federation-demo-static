@@ -8,7 +8,7 @@ import {RouterModule} from '@angular/router';
 {
     selector: 'sample-menu',
     templateUrl: 'sampleMenu.component.html',
-    styleUrls: ['sampleMenu.component.scss'],
+    // styleUrls: ['sampleMenu.component.scss'],
     standalone: true,
     imports:
     [

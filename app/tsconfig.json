@@ -7,6 +7,10 @@
         {
             "shared-stuff": ["../shared-stuff/index.ts"],
             "app-config": ["../app-config/index.ts"],
+            "cmp/plugin": ["../cmp/app/plugin.ts"],
+            "cmp/components": ["../cmp/app/components/index.ts"],
+            "lib/plugin": ["../lib/app/plugin.ts"],
+            "lib/components": ["../lib/app/components/index.ts"],
         },
     },
     "include":

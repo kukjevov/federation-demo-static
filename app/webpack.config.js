@@ -330,6 +330,11 @@ export default [function(options, args)
             new webpack.container.ModuleFederationPlugin(
             {
                 name: 'client',
+                remotes: 
+                {
+                    cmp: 'cmp@http://localhost:8081/remoteEntry.js',
+                    lib: 'lib@http://localhost:8080/remoteEntry.js',
+                },
                 shared:
                 {
                     ...sharedDependenciesLazy,
