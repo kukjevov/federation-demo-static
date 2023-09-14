@@ -1,0 +1,15 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions":
+    {
+        "baseUrl": ".",
+        "paths": 
+        {
+            "app-config": ["../app-config/index.ts"]
+        },
+    },
+    "files": 
+    [
+        "index.ts"
+    ],
+}

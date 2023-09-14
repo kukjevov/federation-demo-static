@@ -1,0 +1,11 @@
+<div *authorize="'authenticated'" class="flex-row">
+    <a routerLink="/" routerLinkActive="active" class="margin-right-extra-small">Home</a>
+    <a routerLink="/lazy" routerLinkActive="active" class="margin-right-extra-small">Lazy</a>
+    
+    <ng-container *ngFor="let dynamicMenuItem of dynamicMenuItems">
+        <ng-container *ngComponentOutlet="dynamicMenuItem"></ng-container>
+    </ng-container>
+
+    <a (click)="logout()">Logout</a>
+    <a (click)="openSettings()" class="fas fa-cog"></a>
+</div>

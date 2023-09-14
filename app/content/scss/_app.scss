@@ -1,0 +1,51 @@
+@use 'misc' as misc;
+@use 'mixins';
+
+@use 'parts/alerts' as alerts;
+@use 'parts/blocks' as blocks;
+@use 'parts/buttons' as buttons;
+@use 'parts/common.components' as commonComponents;
+@use 'parts/common' as common;
+@use 'parts/forms' as forms;
+@use 'parts/grid' as grid;
+@use 'parts/titles' as titles;
+
+@use '@anglr/common/styles' as anglrCommon;
+@use '@anglr/datetime/styles' as datetime;
+
+//---------------------- PAGE STYLING ----------------------
+.app-page
+{
+    font-family: "Inter";
+    user-select: none;
+    background-color: var(--page-background);
+    color: var(--page-foreground);
+
+    //############## PACKAGES ##############
+
+    @include anglrCommon.buildThemeCss;
+    @include datetime.buildThemeCss;
+
+    //############## SIZES ##############
+
+    @include mixins.buildSizes;
+
+    //############## SCROLLBAR ##############
+
+    @include mixins.thin-scrollbar-color('--page-scrollbar');
+
+    //############## PARTS ##############
+
+    @include alerts.css;
+    @include blocks.css;
+    @include buttons.css;
+    @include commonComponents.css;
+    @include common.css;
+    @include forms.css;
+    @include grid.css;
+    @include titles.css;
+
+    //############## MISC ##############
+
+    @include misc.css;
+}

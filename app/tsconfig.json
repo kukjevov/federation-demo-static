@@ -1,0 +1,21 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions":
+    {
+        "baseUrl": ".",
+        "paths": 
+        {
+            "shared-stuff": ["../shared-stuff/index.ts"],
+            "app-config": ["../app-config/index.ts"],
+        },
+    },
+    "include":
+    [
+        "app/**/*.ts",
+        "packages/**/*.ts"
+    ],
+    "exclude":
+    [
+        "node_modules"
+    ],
+}

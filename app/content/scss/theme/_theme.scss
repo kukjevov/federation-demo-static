@@ -1,0 +1,24 @@
+@use './themeColors' as themeColors;
+
+@use '@anglr/common/styles' as anglrCommon;
+@use '@anglr/datetime/styles' as datetime;
+
+$theme: () !default;
+$themeName: null !default;
+$dateTimeTheme: null !default;
+$multiButtonTheme: null !default;
+$tooltipTheme: null !default;
+
+//---------------------- PAGE STYLING ----------------------
+.app-page.#{$themeName}
+{
+    //############## THEME ##############
+
+    @include themeColors.buildThemeColors($theme);
+
+    //############## PACKAGES ##############
+
+    @include anglrCommon.buildThemeColorsTooltip($tooltipTheme);
+    @include anglrCommon.buildThemeColorsMultiButton($multiButtonTheme);
+    @include datetime.buildThemeColors($dateTimeTheme);
+}

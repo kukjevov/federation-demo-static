@@ -1,0 +1,27 @@
+{
+    "configuration":
+    {
+        "debug": false,
+        "debugTranslations": false,
+        "apiBaseUrl": "",
+        "defaultApiHeaders": {},
+        "themes": [],
+        "languages": [],
+        "disableMockLogger": true
+    },
+    "general":
+    {
+        "theme": "",
+        "language": ""
+    },
+    "plugins": [],
+    "debug":
+    {
+        "consoleEnabled": false,
+        "debugData": false
+    },
+    "logging":
+    {
+        "consoleLogLevel": ""
+    }
+}

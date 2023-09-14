@@ -1,0 +1,52 @@
+{
+    "configuration":
+    {
+        "debug": false,
+        "apiBaseUrl": "api/",
+        "defaultApiHeaders": 
+        {
+            "Accept": "application/json"
+        },
+        "themes":
+        [
+            "light",
+            "dark"
+        ],
+        "languages":
+        [
+            {
+                "lang": "en",
+                "name": "English"
+            },
+            {
+                "lang": "sk",
+                "name": "Slovenčina"
+            }
+        ]
+    },
+    "general":
+    {
+        "theme": "light",
+        "language": "en"
+    },
+    "plugins":
+    [
+        {
+            "url": "http://localhost:8080/remoteEntry.js",
+            "scope": "lib"
+        },
+        {
+            "url": "http://localhost:8081/remoteEntry.js",
+            "scope": "cmp"
+        }
+    ],
+    "debug":
+    {
+        "consoleEnabled": false,
+        "debugData": false
+    },
+    "logging":
+    {
+        "consoleLogLevel": "verbose"
+    }
+}
